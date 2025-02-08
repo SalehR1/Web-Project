@@ -1,4 +1,5 @@
 Web Project (Name)
+
 A unified platform for managing and engaging with university events and workshops
 
 Our project is a digital platform designed to centralize and streamline event 
