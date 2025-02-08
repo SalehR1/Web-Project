@@ -1,6 +1,4 @@
-Web Project (Name)
-
-
+# Web Project (Name)
 
 Our project is a digital platform designed to centralize and streamline event 
 communication at Taibahu University. Currently, the university lacks an efficient way to 
