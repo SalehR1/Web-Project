@@ -1,4 +1,4 @@
-# Web Project (Name)
+# Univets "FS Web Dev Final Project"
 
 Our project is a digital platform designed to centralize and streamline event 
 communication at Taibahu University. Currently, the university lacks an efficient way to 
