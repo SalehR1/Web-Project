@@ -1,0 +1,213 @@
+
+<!--حمدي اللقماني-->
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head> 
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="login.css"/>
+    <script src="login.js" defer></script>
+
+
+</head>
+<body dir="auto">  
+  <!-- زر تسجيل الدخول -->
+  <button id="openModalBtn" class="Btn"> <div class="sign">
+    <svg viewBox="0 0 512 512">
+      <path
+        d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+      ></path>
+    </svg>
+  </div>
+
+  <div class="text">تسجيل الدخول</div></button>
+
+
+
+  <!-- لوح الخطأ  -->
+  <div id="errorNotification" class="notifications-container hidden">
+    <div class="error-alert">
+      <div class="flex">
+        <div class="error-prompt-container">
+          <p class="error-prompt-heading"></p><br>
+          <div class="error-prompt-wrap">
+            <ul class="error-prompt-list" role="list">
+              <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            
+            </ul>
+          </div>
+        </div>
+  
+
+
+
+         <!-- زر الإغلاق داخل SVG -->
+         <div class="close-container">
+      <svg id="closeNotification" class="close-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+      </svg>
+         </div>
+      </div>
+
+
+
+      <!-- شريط التقدم (20 ثانية) -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    </div>
+  </div>
+  
+
+
+  <!-- هيكل النفذا المنبثقاء -->
+  <div id="modalOverlay" class="modal-overlay"></div>
+  <div id="loginModal" class="modal-content">
+    
+    <button class="butto" id="closeModalBtn"><span class="X">&times;</span>
+      <span class="Y"></span></button>
+
+      
+
+
+    <!-- محتوى نموذج تسجيل الدخول -->
+    <div class="container active" id="loginContainer">
+      <form class="login-form" id="loginContainer"  >
+        <div class="images-container">
+          <img src="HG.gif"  alt="Logo">
+          <div class="separator"></div>
+          <img src="logo-taibah.png"  alt="Logo">
+      </div>
+    
+          <h2>تسجيل الدخول</h2>
+          <h3 class="h3">مرحبًا بعودتك!</h3>
+          
+          <input type="text" id="username" placeholder="👤أدخل اسم المستخدم "  autofocus>
+          <input type="password" id="password"   placeholder=" 🔒 أدخل كلمة المرور  ">
+          
+          <button class="btn-login" type="submit">تسجيل الدخول</button>
+          <br><br>
+    
+        <div class="links">
+          <span onclick="switchForm('forgot')">نسيت كلمة المرور؟</span>|
+          <span onclick="switchForm('signup')"   >إنشاء حساب</span>
+        </div>
+      </form>
+    </div>
+
+    
+
+        <!-- محتوى نموذج نسيت كلمة المرور -->
+
+    <div class="container" id="resetPasswordContainer">
+        <form action="" class="login-form" id="resetPasswordContainer">
+          <div class="images-container">
+              <img src="DF.png" alt="Logo">
+              <div class="separator"></div>
+              <img src="logo-taibah.png" alt="Logo">
+          </div>
+    
+          <h2>إعادة تعيين كلمة المرور</h2>
+          <h4>سيتم إرسال رمز تأكيد مكون من 4 أرقام إلى رقم الجوال المدخل</h4>
+          <input type="text" placeholder="📞 أدخل رقم الجوال" required>
+          <input type="text" placeholder="👤 أدخل اسم المستخدم" required>
+          <input type="password" placeholder="🔒 أدخل كلمة المرور الجديدة" required>
+          <input type="password" placeholder="🔒 إعادة إدخال كلمة المرور" required>
+    
+          <button class="btn-login" type="submit">إرسال</button>
+
+        <div class="links">
+          <span onclick="switchForm('login')" >عودة لتسجيل الدخول</span>
+        </div>
+      </form>
+    </div>
+    
+
+
+
+
+        <!--  محتوى نموذج أنشاء حساب  -->
+    <div class="container" id="signupContainer">
+      <form class="login-form" id="signupContainer">
+         <div class="images-container">
+          <img src="DF.png" alt="Logo">
+          <div class="separator"></div>
+          <img src="logo-taibah.png" alt="Logo">
+      </div>
+
+      <h2>إنشاء حساب</h2>
+      <h4>سيتم إرسال رمز مكون من 4 أرقام إلى رقم الجوال للتأكيد</h4>
+      <input type="text" placeholder="👤 أدخل اسمك الكامل" required>
+      <input type="text" placeholder="👤 أدخل اسم المستخدم" required>
+      <input type="number" placeholder="📞 أدخل رقم الجوال" required >
+      <input type="password" id="signupPassword"  placeholder="🔒 أدخل كلمة المرور الجديدة" >
+
+      <button class="btn-login" type="submit">إنشاء حساب</button>
+
+        <div class="links">
+          <span onclick="switchForm('login')"  >عودة لتسجيل الدخول</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script>
+  // منطق تبديل النموذج 
+  function switchForm(type) {
+    document.querySelectorAll('.container').forEach(form => {
+      form.classList.remove('active');
+    });
+    
+    // إظهار النموذج المستهدف
+    const formMap = {
+      login: 'loginContainer',
+      signup: 'signupContainer',
+      forgot: 'resetPasswordContainer'
+    };
+    
+    if(formMap[type]) {
+      document.getElementById(formMap[type]).classList.add('active');
+    }
+  }
+
+  //  التحكم في الوسائط 
+  const modalElements = {
+    overlay: document.getElementById('modalOverlay'),
+    modal: document.getElementById('loginModal'),
+    openBtn: document.getElementById('openModalBtn'),
+    closeBtn: document.getElementById('closeModalBtn')
+  };
+
+  modalElements.openBtn.addEventListener('click', () => {
+    modalElements.overlay.style.display = 'block';
+    modalElements.modal.style.display = 'block';
+    switchForm('login');
+  });
+
+  function closeModal() {
+    modalElements.overlay.style.display = 'none';
+    modalElements.modal.style.display = 'none';
+    switchForm('login'); 
+  }
+
+  modalElements.closeBtn.addEventListener('click', closeModal);
+  modalElements.overlay.addEventListener('click', closeModal);
+
+
+  </script>
+
+
+
+</body>
+</html>
+<!--حمدي اللقماني-->

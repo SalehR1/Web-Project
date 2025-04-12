@@ -1,0 +1,622 @@
+/*حمدي اللقماني*/
+/* ضبط الخلفية وتنسيق الصفحة */
+body {
+  background-image: linear-gradient(1deg, #2245bc, #667db1, #85b7a3, #96f48f);
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    font: 16px Cairo, sans-serif;
+    font: 400 .8em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    top: 20px;
+    right: 20px;
+    position: relative;
+
+}
+
+.login-form h3 {
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 18px;
+    width: 100%;       
+    text-align: right; 
+  }
+  
+
+
+
+
+
+/* تصميم نموذج تسجيل الدخول */
+form {
+    background-color: #ffffff;
+    padding: 13px;
+    border-radius: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: unset;
+    top: 50%;
+    border-top:6px solid #31a770;
+  
+}
+
+
+
+/* تنسيق حقول الإدخال */
+input {
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #9b9b9b;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+
+/* زر تسجيل الدخول */
+.btn-login {
+    background-color: #31A770;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    display: block;
+    font-size: 15px;
+}
+
+.btn-login:hover {
+    background-color: #2292cc;
+}
+
+
+
+
+
+.btn-external-login img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.btn-external-login:hover {
+    background-color: #e0e0e0;
+}
+
+
+
+
+
+/* تنسيق الروابط مع تباعد بينها */
+.links span {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    margin: 0 25px;
+
+
+}
+
+.links span:hover {
+    color: #0056b3;
+    text-decoration: none;
+
+}
+
+
+
+/* تحسينات إضافية */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+
+p.signup {
+    margin-top: 15px;
+    color: #666;
+}
+
+
+
+
+
+
+/*  */
+.container {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*  تعديلات RTL  */
+.login-form {
+  text-align: right;
+}
+
+.links {
+  cursor: pointer;
+  color: #2020b6;
+  float: left; 
+}
+
+.modal-overlay {
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  transition: 
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+
+
+
+
+/* زر تسجيل الدخول في أعلى اليسار */
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    position: relative;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #31A770;
+
+
+  }
+  
+  /* الجمع */
+  .sign {
+    width: 100%;
+    transition-duration: 0.3s;
+ 
+  }
+  
+  .sign svg {
+    width: 20px;
+    
+    
+  }
+  
+  .sign svg path {
+    fill: rgb(0, 0, 0);
+
+   
+  }
+  /* النص */
+  .text {
+    position: absolute;
+    right: 5%;
+    width: 15%;
+    opacity: 0;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+   
+  }
+  /* تأثير التمرير على عرض الزر */
+  .Btn:hover {
+    background-color: #2292cc;
+    width: 255px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+
+}
+  
+  .Btn:hover .sign {
+    width: 25%;
+    transition-duration: 0.3s;
+    padding-left: 20px;
+  }
+  
+  .Btn:hover .sign svg path {
+    fill: rgb(0, 0, 0);
+  }
+  
+  /* نص زر تأثير التمرير */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 90%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+  }
+  /* تأثير النقر فوق الزر*/
+  .Btn:active {
+    transform: translate(2px, 2px);
+
+  }
+
+
+  .hidden {
+    display: none;
+}
+
+
+
+
+/* تلوين حقول الادخال   */
+
+.invalid {
+  animation: shake 0.5s;
+  border: 2px solid #ff4444 !important;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+
+
+
+
+
+
+/*   لوح الخطأ    */
+  .notifications-container {
+    width: 320px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    right: auto;
+    z-index: 1001;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.error-alert {
+    border-radius: 0.375rem;
+    padding: 0.975rem;
+    width: 290px;
+    min-height: 100px; 
+    background-color: rgb(254, 242, 242);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #F87171;
+}
+
+.error-prompt-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.25rem;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.error-prompt-heading {
+  margin-left: 30px;
+    color: #991B1B;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
+
+.error-prompt-wrap {
+    margin-top: 0.5rem;
+    color: #B91C1C;
+    font-size: 0.9rem;
+    
+}
+
+.error-prompt-list {
+    padding-right: 1.25rem;
+    margin-top: 0.25rem;
+    list-style-type: disc;
+}
+
+
+
+
+
+/*  زر الإغلاق في الأعلى  */
+.close-container {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.close-svg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: #ff4b4b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.close-svg:hover {
+    background-color: red;
+}
+
+
+
+
+
+/*  شريط التقدم يبقى في الأسفل */
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #fde2e2;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.progress-bar {
+    height: 8px;
+    width: 0%;
+    background-color: #f13c3c;
+    transition: width 15s linear;
+}
+
+
+
+
+
+
+/* الطبقة العاتمة */
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+
+
+/* النافذة المنبثقة */
+#loginModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 380px;
+    height:auto ;
+    min-height: 590px;
+    display: none;
+    border-top:5px solid #31a770;
+    border-left:5px solid #31a770;
+    border-right:5px solid #31a770;
+    border-bottom:5px solid #31a770;
+    
+}
+
+@media (max-width: 400px) {
+  #loginModal , .notifications-container {
+    width: 90vw;
+    min-height: 300px;
+  }
+}
+
+
+
+
+
+
+/* زر الإغلاق */
+
+.butto {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border: none;
+    background: rgba(0, 0, 0, 0.941);
+    border-radius: 5px;
+    transition: background 0.5s;
+    top: -2px;
+    left: 180px;
+  }
+  
+  .X {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) rotate(45deg);
+  }
+  
+  .Y {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: #fff;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  
+  
+  .butto:hover {
+    background-color: rgb(211, 21, 21);
+  }
+  
+  .butto:active {
+    background-color: rgb(130, 0, 0);
+  }
+  
+  .butto:hover > .close {
+    animation: close 0.2s forwards 0.25s;
+  }
+  
+  @keyframes close {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+
+
+/* إظهار النافذة */
+.show {
+    display: block !important;
+   
+}
+
+
+
+/*  تصميم الصور والخط */
+.images-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.images-container img {
+    width: 60px; 
+    height: 60px;
+}
+
+.separator {
+    width: 2px;
+    height: 35px;
+    background-color: #000000; 
+    margin: 0 15px;
+}
+
+
+
+
+
+
+/* الطبقة العاتمة للخلفية */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; 
+}
+
+
+
+/* صندوق النافذة المنبثقة */
+.modal-content {
+  min-height: 300px;
+  height: auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* زر الإغلاق */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+
+/* حمدي اللقماني*/
