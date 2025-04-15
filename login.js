@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
     signup: {
-      form: document.getElementById("signupContainer"),
+      form: document.getElementById("signupForm"),
       fields: {
         password: document.getElementById("signupPassword")
       },
@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     void progressBar.offsetWidth;
 
-    
+
+
 
     // تحديث المحتوى
     errorHeading.textContent = heading;
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       progressBar.style.transition = 'width 15s linear';
       progressBar.style.width = '100%';
-    }, 10);
+    }, 50);
 
 
     // إدارة المهلة
@@ -153,7 +154,8 @@ formsConfig.login.form.addEventListener("submit", function(e) {
       showNotification(formsConfig.signup.messages.heading, errors);
     } else {
       resetFieldStyles(formsConfig.signup.fields.password);
-      form.submit();
+      formsConfig.signup.form.submit();
+
     }
   });
 

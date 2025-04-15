@@ -410,6 +410,10 @@ p.signup {
     transition: width 15s linear;
 }
 
+#progressBar.active {
+  transition: width 15s linear;
+  width: 100%
+}
 
 
 
@@ -433,7 +437,12 @@ p.signup {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) ;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-width: 3px;
     background: white;
     padding: 5px;
     border-radius: 15px;
@@ -617,6 +626,108 @@ p.signup {
   max-width: 500px;
   position: relative;
 }
+
+
+
+
+/* تحسين استجابة الصفحة لجميع الأجهزة */
+@media (max-width: 1200px) {
+  /* تحسين الحاويات */
+  .container, .login-form {
+      width: 80%;
+      margin: 0 auto;
+  }
+
+  /* تحسين التنسيق على الشاشات الكبيرة */
+  .login-form {
+      padding: 20px;
+      width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* تحسين عرض النماذج على الأجهزة اللوحية */
+  .container, .login-form {
+      width: 90%;
+  }
+
+  /* ضبط الحقول */
+  input {
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  /* تغيير شكل الأزرار */
+  .btn-login {
+      padding: 15px;
+      font-size: 16px;
+  }
+
+  /* تحسين الروابط */
+  .links span {
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* تحسين التنسيق على الجوال */
+  .container, .login-form {
+      width: 95%;
+      padding: 10px;
+  }
+
+  /* تغيير حجم النصوص في النماذج */
+  .login-form h3 {
+      font-size: 16px;
+  }
+
+  /* تكبير الأزرار على الجوال */
+  .btn-login {
+      padding: 12px;
+      font-size: 14px;
+  }
+
+  /* تغيير الشكل العام للمحتويات */
+  .modal-content {
+      padding: 15px;
+      width: 100%;
+  }
+
+  /* زيادة المسافة بين الحقول */
+  input {
+      margin-bottom: 10px;
+  }
+
+  /* تغيير العرض في الأزرار */
+  .Btn:hover {
+      width: 100%;
+  }
+}
+
+/* تحسين عرض الرسائل المنبثقة */
+@media (max-width: 400px) {
+  .notifications-container {
+      width: 90vw;
+      min-height: 300px;
+  }
+
+  .error-alert {
+      width: 100%;
+      padding: 10px;
+  }
+}
+
+/* تحجيم الصور بشكل جيد */
+@media (max-width: 768px) {
+  .images-container img {
+      width: 50px;
+      height: 50px;
+  }
+}
+
+
+
+
 
 
 /* حمدي اللقماني*/
