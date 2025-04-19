@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Univents</title>
+    <link rel="stylesheet" href="Homepage.css" />
+    <!-- ملف css -->
+    <script src="Homepage.js" defer></script>
+    <!-- ملف js -->
+  </head>
+  <body>
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- class تصميم للجزء العلوي -->
+    <div class="navbar">
+      <!-- اللوقو حق الصفحه -->
+      <a href="Homepage.html">
+        <img
+          src="../Settings/Images/taibah_logo.png"
+          class="logo"
+          alt="شعار طيبة"
+        />
+      </a>
+
+      <!-- زر عن الصفحه -->
+      <a
+        onclick="window.location.href = '../Settings/information/info.html'"
+        target="_blank"
+      >
+        <button id="about-btn">About</button>
+      </a>
+
+      <!--زر تحويل الغه-->
+      <button onclick="toggleLanguage()">En/عربي</button>
+
+      <!--البروفايل-->
+      <a href="الربط هنا" target="_blank">
+        <button
+          id="profile-btn"
+          onclick="window.location.href = '../Settings/main_settings/Settings.html'"
+        >
+          Profile
+        </button>
+      </a>
+
+      <!-- زر تسجيل الدخول -->
+      <a href="../Login Pages/login.php" target="_blank">
+        <button id="openModalBtn" class="Btn">
+          <div class="sign">
+            <svg viewBox="0 0 512 512">
+              <path
+                d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 
+                406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 
+                0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 
+                9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 
+                32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="text">Log in</div>
+        </button>
+      </a>
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!-- class عشان تصميم شكل (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
+    <div class="section">
+      <!-- الاشعارات و الاعلانات-->
+      <span>Notificaion - Announcement</span>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- class + صور الاشعارات -->
+    <div class="Notificaion-container">
+      <!-- R arrow-->
+      <button class="arrow" onclick="prevSlide()"><</button>
+
+      <div class="Notificaion">
+        <div id="Notificaion" class="Notificaion-slide">
+          <!-- الشعارات -->
+          <a href="/HomePage/Notificaion/Notificaion1.html" target="_blank">
+          <img src="../Settings/Images/notification1.png" alt="Notificaion 1" />
+          </a>
+        </div>
+      </div>
+
+      <!-- L arrow-->
+      <button class="arrow" onclick="nextSlide()">></button>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- class عشان تصميم المستطيل الي في (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
+    <div class="container">
+      <!-- class عشان تصميم شكل (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
+      <div class="section">
+        <!-- قسم الاحداث -->
+        <span>Events Section</span>
+        <!--زر عرض الجميع-->
+        <button class="show-all" onclick="showAll('events')">Show All</button>
+      </div>
+
+      <!------------------------------------------------------------------------------------------------------------------------------->
+
+      <!-- class + صور قسم الاحداث-->
+      <div class="events-container">
+        <div class="event">
+          <!-- الصوره الاوله -->
+          <a href="../HomePage/event/event1.html" target="_blank">
+          <img src="../Settings/Images/events1.png" alt="event 1" />
+          </a>
+        </div>
+
+        <div class="event">
+          <!-- الصوره الثانيه -->
+          <a href="/HomePage/event/event2.html" target="_blank">
+          <img src="../Settings/Images/events2.png" alt="event 2" />
+        </div>
+        <div class="event">
+          <!--الصوره الثالثه-->
+          <a href="/HomePage/event/event3.html" target="_blank">
+          <img src="../Settings/Images/events3.png" alt="event 3" />
+          </a>
+        </div>
+
+      </div>
+      <!------------------------------------------------------------------------------------------------------------------------------->
+
+      <!-- class عشان تصميم شكل (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
+      <div class="section">
+        <!-- الفعاليات-->
+        <span>Activities</span>
+        <!--زر عرض الجميع-->
+        <button class="show-all" onclick="showAll('activities')">
+          Show All
+        </button>
+      </div>
+      <!------------------------------------------------------------------------------------------------------------------------------->
+
+      <!--class + صور الفعاليات-->
+      <div class="Activities-container">
+        <div class="Activities">
+          <!-- الصوره الاوله -->
+          <a href="/HomePage/activities/activities1.html" target="_blank">
+          <img src="../Settings/Images/activity1.png" alt="Activities 1" />
+          </a>
+        </div>
+
+        <div class="Activities">
+          <!-- الصوره الثانيه -->
+          <a href="/HomePage/activities/activities2.html" target="_blank">
+          <img src="../Settings/Images/activity2.png" alt="Activities 2" />
+          </a>
+        </div>
+
+        <div class="Activities">
+          <!--الصوره الثالثه-->
+          <a href="/HomePage/activities/activities3.html" target="_blank">
+          <img src="../Settings/Images/activity3.png" alt="Activities 3" />
+          </a>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------------------------------------------------------------------->
+
+      <!-- class عشان تصميم شكل (الاحداث و الكليه و الفعاليات) عشان يكونو نفس التصميم-->
+      <div class="section">
+        <!-- احداث الكليه -->
+        <span>Colleges Categories Event Section</span>
+        <!--زر عرض الجميع-->
+        <button class="show-all" onclick="showAll('Colleg')">Show All</button>
+      </div>
+
+      <!-- class + صور احداث الكليه-->
+      <div class="Colleg-container">
+        <div class="Colleg">
+          <!-- الصوره الاوله -->
+          <a href="/HomePage/Colleg/Colleg1.html" target="_blank">
+          <img src="../Settings/Images/Colleg1.png" alt="Colleg 1" />
+          </a>
+        </div>
+
+        <div class="Colleg">
+          <!-- الصوره الثانيه -->
+          <a href="/HomePage/Colleg/Colleg2.html" target="_blank">
+          <img src="../Settings/Images/Colleg2.png" alt="Colleg 2" />
+          </a>
+        </div>
+
+        <div class="Colleg">
+          <!--الصوره الثالثه-->
+          <a href="/HomePage/Colleg/Colleg3.html" target="_blank">
+          <img src="../Settings/Images/Colleg3.png" alt="Colleg 3" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <footer>
+      <p>&copy; FS WebDev Univents</p>
+    </footer>
+  </body>
+</html>

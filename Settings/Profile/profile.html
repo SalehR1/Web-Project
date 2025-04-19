@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-picture-container">
+      <img id="profilePicture" src="../Images/Default-pfp.png" alt="Profile Picture" />
+      <input type="file" id="profileInput" accept="image/png, image/jpeg, image/webp" />
+    </div>
+
+    <div class="user-info">
+      <h2>Profile Information</h2>
+      <div class="info-item">
+        <label>Full Name:</label>
+        <p>Ahmed</p>
+      </div>
+      <div class="info-item">
+        <label>Email:</label>
+        <p>Ahmed@gmail.com</p>
+      </div>
+      <div class="info-item">
+        <label>Major:</label>
+        <p>Computer Science</p>
+      </div>
+      <div class="info-item">
+        <label>Student ID:</label>
+        <p>4505556</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-button-container">
+    <a href="../main_settings/Settings.html" class="back-button" >← Back</a>
+  </div>
+
+  <script>
+    const profileInput = document.getElementById("profileInput");
+    const profilePicture = document.getElementById("profilePicture");
+
+    profileInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        profilePicture.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+</body>
+</html>
